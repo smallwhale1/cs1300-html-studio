@@ -1,20 +1,69 @@
-#logoBar{
+#logoBar {
   width: 30vw;
   height: 100vh;
+  color: #ffffff;
+  text-align: center;
 }
-#siteLogo{
+
+#siteLogo {
   width: 100%;
 }
+
 body {
   display: flex;
+  background-color: #bb5913;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
 }
-#staffGallery{
-  width: 70vw;
-  display: inherit;
 
+.card {
+  border-radius: 1rem;
+  background-color: #ffe7ba;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: scale 0.3s ease;
 }
-.galleryImage{
-  width: 100%;
-  height: auto;
-  height: 300px;
+
+.card:hover {
+  scale: 1.03;
+}
+
+.nameTag {
+  margin: 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  text-align: center;
+  color: #bb5913;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-weight: bold;
+}
+
+#staffGallery {
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.galleryImage {
+  width: 250px;
+  height: 250px;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  #logoBar {
+    width: auto;
+    height: auto;
+  }
+
+  #staffGallery {
+    width: auto;
+  }
 }
